@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+
+.italianno {
+  font-family: "Italianno", serif !important;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+.text-gold {
+  color: #efbf04;
+}
+.fw-light {
+  font-weight: 300 !important;
+}
+.fw-normal {
+  font-weight: normal !important;
+}
