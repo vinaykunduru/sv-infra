@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // EMAIL CONTENT
-    $to = "realtoramarreddy@gmail.com";  // change to your receiving email
+    $to = "vinaykunduru@gmail.com";  // change to your receiving email
     $subject = "New Contact Request";
     $message = "
         Name: $name\n
