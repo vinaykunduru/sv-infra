@@ -57,6 +57,20 @@
             font-weight: normal;
           }
 
+          .linktodetails::after {
+    line-height: 1;
+    font-family: "Unicons";
+    content: "\e950";
+    padding-left: 0.07rem;
+    color:#ed392b;
+    font-size: 0.9rem;
+    font-weight: normal;
+    vertical-align: -3px;
+    margin-right: -0.25rem
+;
+    display: inline-block;
+}
+
           @media (max-width: 800px) {
             .project{
               margin-bottom: 20px;
@@ -145,10 +159,10 @@
                           <h6 class="dropdown-header">Upcoming Projects</h6>
                           <ul class="list-unstyled">
                             <li>
-                              <a class="dropdown-item" href="/fortune-meadows.html">Fortune Meadows</a>
+                              <a class="dropdown-item linktodetails" href="/fortune-meadows.html">Fortune Meadows</a>
                             </li>
                             <li>
-                              <a class="dropdown-item" href="/high-rise.html">Hi-rise Commercial and <br>Residential Apartment</a>
+                              <a class="dropdown-item linktodetails" href="/high-rise.html">Hi-rise Commercial and <br>Residential Apartment</a>
                             </li>
                           </ul>
                         </div>
@@ -302,12 +316,12 @@
 
 
 
-      <section class="wrapper" style="background-color: #ccc" id="featuredProjects">
+      <section class="wrapper" style="background-color: #ccc" id="completed">
         <style></style>
         <div class="container pb-14 pt-14">
           
           <div class="grid grid-view">
-            <h3 class="mb-6" id="completed">Completed Projects</h3>
+            <h3 class="mb-6" id="">Completed Projects</h3>
             <div class="row gx-md-8 gy-md-10">
               <div class="project item col-md-6 col-xl-3">
                 <div class="card">
@@ -421,9 +435,9 @@
             </div>
             <!-- /.row -->
 
+<div id="ongoing" class="p-10"></div>
 
-
-            <h3 class="mb-6 mt-12" id="ongoing">Ongoing Projects</h3>
+            <h3 class="mb-6" id="">Ongoing Projects</h3>
             <div class="row gx-md-8 gy-md-10">
               <div class="project item col-md-6 col-xl-3">
                 <div class="card">
@@ -452,9 +466,9 @@
             </div>
             <!-- /.row -->
 
+<div id="upcoming" class="p-10"></div>
 
-
-            <h3 class="mb-6 mt-12" id="upcoming">Upcoming Projects</h3>
+            <h3 class="mb-6" id="">Upcoming Projects</h3>
             <div class="row gx-md-8 gy-md-10">
               <div class="project item col-md-6 col-xl-3">
                 <div class="card h-100">
