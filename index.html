@@ -286,12 +286,12 @@
               <article>
                 
                 <div class="row gx-0 align-items-center">
-                  <div class="col-md-6 text-justify">
-                    <h3 class="fs-16 text-uppercase text-primary mb-1">Overview</h3>
+                  <div class="col-md-6">
+                   
                     <h2 class="display-6 mb-4">
                   About S.V. Infra Projects
                 </h2>
-                    <p>
+                    <p style="text-align: justify;">
                       S.V. Infra Projects is a trusted real estate development company based in Hyderabad, Telangana state, India. The promoters bring over 20 years of extensive experience in the construction industry and have successfully executed several projects across residential <strong>gated communities for villas and apartments</strong>, commercial, and layout development sectors under previous ventures. Operating under the name <strong>S.V. Infra Projects</strong> for the past 8 years, the company has consistently delivered projects on schedule, adhering to high standards of quality, transparency, and statutory compliance, thereby earning long-term trust from clients. S.V. Infra Projects is known for quality workmanship, timely delivery, and client satisfaction.
                     </p>
                     
@@ -419,7 +419,7 @@
       <div class="col-lg-6">
         <!-- <h2 class="fs-15 text-uppercase text-line text-primary text-center mb-3">Meet the Team</h2> -->
         <h3 class="display-5 mb-2">Leadership</h3>
-        <p>Leaders in a real estate company are visionaries who transform possibilities into thriving communities. They inspire trust through integrity, empower their teams to strive for excellence, and lead with purpose in every decision they make. By embracing innovation and placing people at the heart of their approach, they create lasting value—not only in the properties they develop, but also in the relationships they build and the lives they enrich. At the helm of our organization is our visionary leader, <strong class="text-primary">P. Vijay N. Raju</strong>, supported by a dynamic leadership team comprising <strong class="text-primary"><br>P.V.N. Shaker Varma, N. Srinu, and P. Harshavardhan</strong>, who collectively drive our mission with dedication and foresight.</p>
+        <p style="text-align: justify;">Leaders in a real estate company are visionaries who transform possibilities into thriving communities. They inspire trust through integrity, empower their teams to strive for excellence, and lead with purpose in every decision they make. By embracing innovation and placing people at the heart of their approach, they create lasting value—not only in the properties they develop, but also in the relationships they build and the lives they enrich. At the helm of our organization is our visionary leader, <strong class="text-primary">P. Vijay N. Raju</strong>, supported by a dynamic leadership team comprising <strong class="text-primary"><br>P.V.N. Shaker Varma, N. Srinu, and P. Harshavardhan</strong>, who collectively drive our mission with dedication and foresight.</p>
         <!-- <a href="#" class="btn btn-primary rounded-pill mt-3">See All Members</a> -->
       </div>
       <!--/column -->
@@ -477,7 +477,20 @@ Developments That Reflect Our Commitment to Quality      </h3>
     <div class="col-lg-4">
       <div class="card">
         <a href="projects.html#completed">
-        <img class="card-img-top" src="assets/img/complted-projects.jpg" alt="">
+       <div class="swiper-container dots-over" data-margin="5" data-dots="false" data-nav="true" data-autoheight="true">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+
+
+      <div class="swiper-slide"><img src="/assets/img/completed-1.jpg" class="" alt="" /></div>
+      <div class="swiper-slide"><img src="/assets/img/completed-2.jpg" class="" alt="" /></div>
+      <div class="swiper-slide"><img src="/assets/img/completed-3.jpg" class="" alt="" /></div>
+    </div>
+    <!--/.swiper-wrapper -->
+  </div>
+  <!-- /.swiper -->
+</div>
+<!-- /.swiper-container -->
         <div class="card-body"><h5 class="card-title">Completed Projects</h5></div><!--/.card-body -->
         </a>
       </div><!--/.card -->
@@ -486,7 +499,20 @@ Developments That Reflect Our Commitment to Quality      </h3>
     <div class="col-lg-4">
       <div class="card">
         <a href="projects.html#ongoing">
-        <img class="card-img-top" src="assets/img/ongoing-projects.jpg" alt="">
+        <div class="swiper-container dots-over" data-margin="5" data-dots="false" data-nav="true" data-autoheight="true">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+
+
+      <div class="swiper-slide"><img src="/assets/img/ongoing-1.jpg" class="" alt="" /></div>
+      <div class="swiper-slide"><img src="/assets/img/ongoing-2.jpg" class="" alt="" /></div>
+      
+    </div>
+    <!--/.swiper-wrapper -->
+  </div>
+  <!-- /.swiper -->
+</div>
+<!-- /.swiper-container -->
         <div class="card-body"><h5 class="card-title">Ongoing Projects</h5></div><!--/.card-body -->
         </a>
       </div><!--/.card -->
@@ -495,7 +521,20 @@ Developments That Reflect Our Commitment to Quality      </h3>
     <div class="col-lg-4">
       <div class="card">
         <a href="projects.html#upcoming">
-        <img class="card-img-top" src="assets/img/upcoming-projects.jpg" alt="">
+        <div class="swiper-container dots-over" data-margin="5" data-dots="false" data-nav="true" data-autoheight="true">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+
+
+      <div class="swiper-slide"><img src="/assets/img/upcoming-1.jpg" class="" alt="" /></div>
+      <div class="swiper-slide"><img src="/assets/img/upcoming-2.jpg" class="" alt="" /></div>
+      
+    </div>
+    <!--/.swiper-wrapper -->
+  </div>
+  <!-- /.swiper -->
+</div>
+<!-- /.swiper-container -->
         <div class="card-body"><h5 class="card-title">Upcoming Projects</h5></div><!--/.card-body -->
         </a>
       </div><!--/.card -->
@@ -525,6 +564,10 @@ Developments That Reflect Our Commitment to Quality      </h3>
           .mobile {
             display: block;
           }
+        }
+
+        .swiper-controls .swiper-navigation .swiper-button{
+          background: rgba(255,255,255,.8);
         }
       </style>
 
