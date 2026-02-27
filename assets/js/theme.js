@@ -127,59 +127,94 @@ var theme = {
    * Requires assets/js/vendor/imagesloaded.pkgd.min.js
    */
   isotope: () => {
-    var grids = document.querySelectorAll('.grid');
-    if(grids != null) {
-      grids.forEach(g => {
-        var grid = g.querySelector('.isotope');
-        var filtersElem = g.querySelector('.isotope-filter');
-        var buttonGroups = g.querySelectorAll('.isotope-filter');
-        var iso = new Isotope(grid, {
-          itemSelector: '.item',
-          layoutMode: 'masonry',
-          masonry: {
-            columnWidth: grid.offsetWidth / 12
-          },
-          percentPosition: true,
-          transitionDuration: '0.7s'
-        });
-        imagesLoaded(grid).on("progress", function() {
-          iso.layout({
-            masonry: {
-              columnWidth: grid.offsetWidth / 12
-            }
-          })
-        }),
-        window.addEventListener("resize", function() {
-          iso.arrange({
-            masonry: {
-              columnWidth: grid.offsetWidth / 12
-            }
-          });
-        }, true);
-        if(filtersElem != null) {
-          filtersElem.addEventListener('click', function(event) {
-            if(!matchesSelector(event.target, '.filter-item')) {
-              return;
-            }
-            var filterValue = event.target.getAttribute('data-filter');
-            iso.arrange({
-              filter: filterValue
-            });
-          });
-          for(var i = 0, len = buttonGroups.length; i < len; i++) {
-            var buttonGroup = buttonGroups[i];
-            buttonGroup.addEventListener('click', function(event) {
-              if(!matchesSelector(event.target, '.filter-item')) {
-                return;
-              }
-              buttonGroup.querySelector('.active').classList.remove('active');
-              event.target.classList.add('active');
-            });
-          }
+
+  var grids = document.querySelectorAll('.grid');
+
+  // stop if no grid containers
+  if (!grids || grids.length === 0) return;
+
+  grids.forEach(g => {
+
+    var grid = g.querySelector('.isotope');
+    var filtersElem = g.querySelector('.isotope-filter');
+    var buttonGroups = g.querySelectorAll('.isotope-filter');
+
+    // ✅ VERY IMPORTANT FIX
+    if (!grid) return;
+
+    var iso = new Isotope(grid, {
+      itemSelector: '.item',
+      layoutMode: 'masonry',
+      masonry: {
+        columnWidth: grid.offsetWidth ? grid.offsetWidth / 12 : 100
+      },
+      percentPosition: true,
+      transitionDuration: '0.7s'
+    });
+
+    // images loaded fix
+    imagesLoaded(grid).on("progress", function () {
+
+      if (!grid) return;
+
+      iso.layout({
+        masonry: {
+          columnWidth: grid.offsetWidth ? grid.offsetWidth / 12 : 100
         }
       });
+
+    });
+
+    // resize fix
+    window.addEventListener("resize", function () {
+
+      if (!grid) return;
+
+      iso.arrange({
+        masonry: {
+          columnWidth: grid.offsetWidth ? grid.offsetWidth / 12 : 100
+        }
+      });
+
+    }, true);
+
+
+    // filters fix
+    if (filtersElem) {
+
+      filtersElem.addEventListener('click', function (event) {
+
+        if (!event.target.matches('.filter-item')) return;
+
+        var filterValue = event.target.getAttribute('data-filter');
+
+        iso.arrange({
+          filter: filterValue
+        });
+
+      });
+
+      buttonGroups.forEach(buttonGroup => {
+
+        buttonGroup.addEventListener('click', function (event) {
+
+          if (!event.target.matches('.filter-item')) return;
+
+          var active = buttonGroup.querySelector('.active');
+
+          if (active) active.classList.remove('active');
+
+          event.target.classList.add('active');
+
+        });
+
+      });
+
     }
-  },
+
+  });
+
+},
   /**
    * Onepage Header Offset
    * Adds an offset value to anchor point equal to sticky header height on a onepage
